@@ -18,7 +18,8 @@ export interface Resource {
 export class CreateResourceService {
   constructor(protected http: HttpClient) {}
 
-  private link_address = 'https://ex01-comp590-140-25sp-dzahng.apps.unc.edu/';
+  private link_address =
+    'https://paste-link-api.thankfulstone-7551a8ee.eastus.azurecontainerapps.io/';
 
   createResource(
     resource_type: string,

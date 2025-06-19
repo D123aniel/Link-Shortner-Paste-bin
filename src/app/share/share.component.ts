@@ -46,7 +46,8 @@ export class ShareComponent implements OnInit {
     if (this.shareForm.valid) {
       const resourceType: string = this.shareForm.get('type')?.value;
       const resourceContent: string = this.shareForm.get('content')?.value;
-      const link_address = 'https://ex01-comp590-140-25sp-dzahng.apps.unc.edu/';
+      const link_address =
+        'https://paste-link-api.thankfulstone-7551a8ee.eastus.azurecontainerapps.io/';
       // TODO: Replace this with actual submission logic!
       this.createResourceService
         .createResource(resourceType, resourceContent)
