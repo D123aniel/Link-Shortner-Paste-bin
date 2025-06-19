@@ -1,0 +1,59 @@
+<div class="share-form-container">
+  <h2>Share a Resource</h2>
+
+  <form [formGroup]="shareForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="type">Resource Type</label>
+      <select id="type" formControlName="type" class="form-control">
+        <option value="link">Link URL</option>
+        <option value="text">Text Snippet</option>
+      </select>
+      @if (shareForm.get('type')?.invalid && shareForm.get('type')?.touched) {
+      <div class="error-message">Please select a resource type</div>
+      }
+    </div>
+
+    <div class="form-group">
+      <label for="content">Content</label>
+      <textarea
+        id="content"
+        formControlName="content"
+        class="form-control"
+        rows="5"
+        placeholder="{{
+          shareForm.get('type')?.value === 'url'
+            ? 'Enter URL here...'
+            : 'Paste your text snippet here...'
+        }}"
+      ></textarea>
+      @if (shareForm.get('content')?.invalid &&
+      shareForm.get('content')?.touched) {
+      <div class="error-message">
+        @if (shareForm.get('content')?.errors?.['required']) {
+        <span>Content is required</span>
+        } @if (shareForm.get('content')?.errors?.['minlength']) {
+        <span>Content must be at least 3 characters</span>
+        }
+      </div>
+      }
+    </div>
+
+    <button type="submit" class="btn">Create Shareable Link</button>
+  </form>
+
+  @if (isSubmitted()) {
+  <div class="results-section">
+    <div class="success-message">
+      <h3>Form Submitted Successfully!</h3>
+      <div class="url-display">
+        <p><strong>Resource Type:</strong> {{ submittedValues()?.type }}</p>
+        <p><strong>Content:</strong> {{ submittedValues()?.content }}</p>
+        <p class="todo-message">
+          <!-- TODO: Connect to API to generate shareable URL -->
+          <a [href]="generatedLink()">{{ generatedLink() }}</a>
+        </p>
+      </div>
+    </div>
+  </div>
+  }
+</div>

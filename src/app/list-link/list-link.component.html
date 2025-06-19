@@ -1,0 +1,27 @@
+<div class="list-container">
+  <h1>Resource List</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Content</th>
+        <th>Vanity_URL</th>
+        <th>Type</th>
+        <th>Expiration Time</th>
+        <th>Access Count</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (r of resources(); track r){
+      <tr>
+        <td>{{ r.id }}</td>
+        <td>{{ r.content }}</td>
+        <td>{{ r.vanity_url }}</td>
+        <td>{{ r.type }}</td>
+        <td>{{ r.expiration_time }}</td>
+        <td>{{ r.access_count }}</td>
+      </tr>
+      }
+    </tbody>
+  </table>
+</div>

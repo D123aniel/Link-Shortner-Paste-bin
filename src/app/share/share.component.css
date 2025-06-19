@@ -1,0 +1,119 @@
+.share-form-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+h2 {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.form-control {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: white;
+}
+
+select.form-control {
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 1em;
+}
+
+textarea.form-control {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.btn {
+  display: block;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.error-message {
+  color: #d9534f;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+.ng-invalid.ng-touched {
+  border-color: #d9534f;
+}
+
+.results-section {
+  margin-top: 2rem;
+  padding: 1rem;
+  border-radius: 4px;
+}
+
+.success-message {
+  background-color: #dff0d8;
+  padding: 1rem;
+  border-radius: 4px;
+  margin-top: 1rem;
+}
+
+.success-message h3 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  color: #3c763d;
+}
+
+.url-display {
+  word-break: break-all;
+  padding: 0.75rem;
+  background-color: white;
+  border-radius: 4px;
+  border: 1px solid #d6e9c6;
+}
+
+.url-display a {
+  color: #337ab7;
+  font-weight: 500;
+  text-decoration: underline;
+}
+
+.url-display a:hover {
+  color: #23527c;
+  text-decoration: none;
+}
+
+.error-alert {
+  background-color: #f2dede;
+  color: #a94442;
+  padding: 1rem;
+  border-radius: 4px;
+  margin-top: 1rem;
+}
+
+button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.todo-message {
+  margin-top: 1rem;
+  padding: 0.5rem;
+  background-color: #fcf8e3;
+  border: 1px solid #faebcc;
+  border-radius: 4px;
+  color: #8a6d3b;
+  font-style: italic;
+}
