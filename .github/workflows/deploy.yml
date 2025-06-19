@@ -25,18 +25,9 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Extract GitHub username
-        id: extract-username
-        run: |
-          REPO_NAME=${GITHUB_REPOSITORY#*/}
-          USERNAME=${REPO_NAME#ex02-link-share-}
-          echo "USERNAME=$USERNAME" >> $GITHUB_OUTPUT
-          echo "Repository name: $REPO_NAME"
-          echo "Extracted username: $USERNAME"
-
       - name: Build
         run: |
-          npm run build -- --base-href="/ex02-link-share-${{ steps.extract-username.outputs.USERNAME }}/" --configuration=production
+          npm run build -- --base-href="/COMP423-EX02/" --configuration=production
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
