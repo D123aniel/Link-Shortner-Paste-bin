@@ -1,6 +1,7 @@
 # Angular Demo Project (COMP 423)
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.1.8.
+Visit site: https://d123aniel.github.io/COMP423-EX02/ 
 
 ## Development server
 
