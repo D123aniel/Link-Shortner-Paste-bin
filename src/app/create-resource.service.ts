@@ -19,7 +19,7 @@ export class CreateResourceService {
   constructor(protected http: HttpClient) {}
 
   private link_address =
-    'https://paste-link-api.thankfulstone-7551a8ee.eastus.azurecontainerapps.io/';
+    'https://pastelinkapi.thankfulstone-7551a8ee.eastus.azurecontainerapps.io';
 
   createResource(
     resource_type: string,
